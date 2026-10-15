@@ -1,0 +1,150 @@
+{
+  "app_name": "ORUN",
+  "personality": "8 Hand-Drawn / Journal",
+  "personality_one_liner": "A restorative, spiritually grounded space that feels organic and calm, using soft nature tones and elegant typography.",
+  "color": {
+    "surface": "#F9F6F0",
+    "onSurface": "#2D372B",
+    "surfaceSecondary": "#F0EAD6",
+    "onSurfaceSecondary": "#3A4538",
+    "surfaceTertiary": "#E3DCC8",
+    "onSurfaceTertiary": "#3A4538",
+    "surfaceInverse": "#2D372B",
+    "onSurfaceInverse": "#F9F6F0",
+    "brand": "#5B7053",
+    "onBrand": "#FFFFFF",
+    "brandPrimary": "#5B7053",
+    "onBrandPrimary": "#FFFFFF",
+    "brandSecondary": "#8A9A84",
+    "onBrandSecondary": "#1A2218",
+    "brandTertiary": "#D4DECE",
+    "onBrandTertiary": "#2D372B",
+    "success": "#6B8E6B",
+    "onSuccess": "#FFFFFF",
+    "warning": "#D2A265",
+    "onWarning": "#FFFFFF",
+    "error": "#BA6F61",
+    "onError": "#FFFFFF",
+    "info": "#8DA79D",
+    "onInfo": "#FFFFFF",
+    "border": "#E3DCC8",
+    "borderStrong": "#C5BCA4",
+    "divider": "#E3DCC8",
+    "muted": "#727B6E"
+  },
+  "typography": {
+    "displayFontFamily": "Fraunces",
+    "textFontFamily": "Nunito",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous and calm. Use larger vertical spacing (xl/2xl) between sections to let the content breathe. Do not crowd elements.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 8,
+    "md": 16,
+    "lg": 24,
+    "pill": 999
+  },
+  "shadow_tier": 0,
+  "navigation": "bottom_tabs",
+  "icon_set": "Feather",
+  "glassmorphism": {
+    "enabled": false,
+    "do's": ["Use solid colors (surfaceSecondary) for elevated elements like bottom sheets or sticky actions to maintain the organic, paper-like feel."],
+    "dont's": ["Do not use blur or glass effects, as they conflict with the earthy, hand-drawn personality."]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "LoginRegister",
+      "purpose": "Welcomes the user into the calm space of ORUN with an atmospheric background and a simple entry form.",
+      "states": {
+        "loading": "Centered soft spinner on the form",
+        "empty": "N/A",
+        "error": "Soft inline error message under inputs"
+      },
+      "layout": "Full-bleed background image (calm forest mist) with a vertical gradient scrim (transparent to surfaceInverse at 80%). The login/register form sits in the bottom 40% of the screen, with Nunito text and a pill-shaped brandPrimary CTA."
+    },
+    {
+      "name": "Home",
+      "purpose": "A discovery hub to browse session types and initiate the booking process.",
+      "states": {
+        "loading": "Skeleton cards for session types",
+        "empty": "N/A",
+        "error": "Gentle error message with a 'Tentar novamente' button"
+      },
+      "layout": "Header with 'Continue sua jornada' greeting. Below, a horizontal carousel of session types (Reiki presencial, à distância) displayed as cards with images. The selected session opens a bottom sheet with a horizontal pill-based date/time picker to reduce cognitive load, keeping the session context visible behind it."
+    },
+    {
+      "name": "MyBookings",
+      "purpose": "Allows users to view and manage their upcoming and past sessions.",
+      "states": {
+        "loading": "Skeleton list items",
+        "empty": "Illustration of zen stones with text 'Nenhuma sessão agendada. Encontre seu momento de paz.' and a primary CTA 'Agendar agora'.",
+        "error": "Readable error message with a retry button"
+      },
+      "layout": "Vertical list of booked sessions. Each item is a surfaceSecondary card containing the session date, type, and a subtle 'Cancelar' action. Generous xl vertical spacing between cards."
+    },
+    {
+      "name": "AdminDashboard",
+      "purpose": "Provides therapists a clear overview of today's schedule and tools to manage bookings.",
+      "states": {
+        "loading": "Skeleton list of today's appointments",
+        "empty": "Illustration of an empty calendar with text 'Dia livre hoje.'",
+        "error": "Retry prompt"
+      },
+      "layout": "Top section features large typography indicating the number of sessions today. Below, a clean vertical list of appointments with 'Confirmar' or 'Cancelar' actions. A floating action button (FAB) allows quick management of session types."
+    }
+  ],
+  "images": {
+    "logo_minimalist": {
+      "url": "https://images.unsplash.com/photo-1764298493216-9e201bf30e16?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwbmF0dXJlJTIwbG9nb3xlbnwwfHx8fDE3OTIwODc0MzB8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Minimalist nature logo for ORUN"
+    },
+    "reiki_session": {
+      "url": "https://images.unsplash.com/photo-1494386346843-e12284507169?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxyZWlraSUyMGhlYWxpbmclMjBoYW5kc3xlbnwwfHx8fDE3OTIwODc0MzB8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Reiki healing hands with warm lights"
+    },
+    "empty_state_zen": {
+      "url": "https://images.unsplash.com/photo-1601850141256-e326878aeec3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHx6ZW4lMjBzdG9uZXMlMjBiYWxhbmNlfGVufDB8fHx8MTc5MjA4NzQzMHww&ixlib=rb-4.1.0&q=85",
+      "alt": "Stacked zen stones for empty states"
+    },
+    "login_bg_forest": {
+      "url": "https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxjYWxtJTIwZm9yZXN0JTIwbWlzdHxlbnwwfHx8fDE3OTIwODc0MzB8MA&ixlib=rb-4.1.0&q=85",
+      "alt": "Calm forest mist background"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Ensure the app uses ONLY the light theme as per the problem statement requirements.",
+    "Implement the font family 'Fraunces' for headings and 'Nunito' for body text. Load these using expo-font from a TTF URL if not available locally.",
+    "Do NOT use glassmorphism or blur effects. Use solid `surfaceSecondary` or `surfaceTertiary` for elevated elements like bottom sheets to maintain the organic, hand-drawn feel.",
+    "For the booking flow, use a bottom sheet (`@gorhom/bottom-sheet`) and implement a horizontal, pill-based date/time selector as research shows it reduces cognitive load compared to vertical scrolling lists.",
+    "Use emotional and calming Portuguese (BR) copy throughout (e.g., 'Continue sua jornada' instead of 'Agendar sessão').",
+    "Whenever text is placed over the full-bleed login background, strictly use a vertical gradient scrim (transparent to surfaceInverse at ≥80% opacity) layered beneath the text to ensure WCAG readability."
+  ]
+}
