@@ -10,7 +10,7 @@ export default function ClientTabsLayout() {
   return (
     <AppTabs
       tabs={[
-        { name: "home", label: "Início", icon: "sun", sf: "leaf.fill" },
+        { name: "home", label: "Inícioooooo", icon: "sun", sf: "leaf.fill" },
         { name: "bookings", label: "Agenda", icon: "calendar", sf: "calendar" },
         { name: "profile", label: "Perfil", icon: "user", sf: "person.fill" },
       ]}
